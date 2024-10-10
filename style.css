@@ -519,6 +519,77 @@ input[type="checkbox"]:checked::before {
     background-color: #2c4475; 
   }
 
+/* Медиазапрос для устройств с шириной экрана до 768px */
+@media (max-width: 768px) {
+    .sidebar {
+        display: block; /* Показываем sidebar на планшетах */
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .post-image {
+        width: 100%; /* Изменяем размер изображений */
+    }
+
+    .profile-pic {
+        height: 30px;
+    }
+
+    .post-actions {
+        flex-direction: column;
+    }
+
+    .new-post h2, .post h2 {
+        font-size: 18px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/* Медиазапрос для устройств с шириной экрана до 576px */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .post h2 {
+        font-size: 16px;
+    }
+
+    .post-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

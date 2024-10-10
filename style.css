@@ -579,6 +579,29 @@ input[type="checkbox"]:checked::before {
         font-size: 12px;
         padding: 10px;
     }
+
+    header .navbar {
+        flex-direction: column; 
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-header {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .edit-profile-btn {
+        width: auto; 
+    }
 }
 
 @media (max-width: 576px) {

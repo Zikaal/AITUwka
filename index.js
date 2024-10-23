@@ -1,19 +1,21 @@
-const colors = ['#f0f8ff','#fff', '#000'];
-let colorIndex = 0;
 
-const button = document.getElementById('colorBtn');
+let clickSound = new Audio('audio/click.mp3');
+document.getElementById('secretBtn').addEventListener('click', function() {
+    clickSound.play();  
+});
 
-function changeBackgroundColor() {
-    document.body.style.backgroundColor = colors[colorIndex];
-    
-    colorIndex++;
+document.getElementById('secretBtn').addEventListener('click', function() {
+    const santa = document.getElementById('santa');
+    santa.style.display = 'block'; 
+    santa.style.left = '-300px'; 
 
-    if (colorIndex >= colors.length) {
-        colorIndex = 0;
-    }
-}
-
-button.addEventListener('click', changeBackgroundColor);
+    setTimeout(() => {
+        santa.style.left = '120vw'; 
+        setTimeout(() => {
+            santa.style.display = 'none'; 
+    }, 8000); 
+    }, 100);
+});
 
 
 const modal = document.getElementById('myModal'); 
@@ -36,11 +38,13 @@ window.onclick = function(event) {
     }
 }
 
-form.onsubmit = function(event) {
-    event.preventDefault(); 
-    const formData = new FormData(form);
 
-    fetch('https://jsonplaceholder.typicode.com/posts', { // Updated to a valid endpoint
+function handleFormSubmit(event, callback) {
+    event.preventDefault(); 
+
+    const formData = new FormData(form); 
+
+    fetch('https://jsonplaceholder.typicode.com/posts', { 
         method: 'POST', 
         body: JSON.stringify({
             name: formData.get('name'),
@@ -59,57 +63,33 @@ form.onsubmit = function(event) {
     })
     .then(data => {
         console.log('Success:', data);
-        alert('Your submission was successful!')
+        alert('Your submission was successful!');
         form.reset(); 
+        if (callback) callback(null, data); 
     })
     .catch(error => {
         console.error('Error:', error);
         alert(error); 
+        if (callback) callback(error); 
     });
-    
+
     modal.style.display = "none"; 
 }
+
+form.onsubmit = function(event) {
+    handleFormSubmit(event, function(error, data) {
+        if (error) {
+            console.error('Callback Error:', error);
+        } else {
+            console.log('Callback Data:', data);
+        }
+    });
+};
 
 document.getElementById('show-time').addEventListener('click', function () {
     document.getElementById('current-time').innerHTML = new Date().toLocaleString();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.getElementById('sidebar');
-    const links = sidebar.querySelectorAll('a');
-
-    links[0].focus();
-
-    sidebar.addEventListener('keydown', function(event) {
-        let currentIndex = Array.prototype.indexOf.call(links, document.activeElement);
-
-        if (event.key === 'ArrowDown') {
-            if (currentIndex < links.length - 1) {
-                links[currentIndex + 1].focus();
-            }
-            event.preventDefault(); 
-        } else if (event.key === 'ArrowUp') {
-            if (currentIndex > 0) {
-                links[currentIndex - 1].focus();
-            }
-            event.preventDefault(); 
-        }
-    });
-});
-
-document.getElementById('language').addEventListener('change', function () {
-    const selectedLanguage = this.value; 
-
-    const translatableElements = document.querySelectorAll('[data-en], [data-ru]');
-
-    translatableElements.forEach(element => {
-        element.textContent = element.getAttribute(`data-${selectedLanguage}`);
-        
-        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.placeholder = element.getAttribute(`data-${selectedLanguage}`);
-        }
-    });
-});
 
 const dropArea = document.getElementById('drop-area');
 const uploadPhotoBtn = document.getElementById('uploadPhotoBtn');

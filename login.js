@@ -1,6 +1,5 @@
 // Function to validate the sign-up form
 function validateSignUpForm(event) {
-    event.preventDefault(); // Prevent the form from submitting
     const username = document.getElementById('username').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
@@ -45,21 +44,14 @@ function validateSignUpForm(event) {
         isValid = false;
     }
   
-    // Store user data if form is valid
-    if (isValid) {
-        const userData = {
-            username: username,
-            email: email,
-            password: password // In a real application, do not store passwords in plain text
-        };
-        localStorage.setItem('userData', JSON.stringify(userData)); // Store user data
-        alert('Registration successful! You can now log in.'); // Notify user of successful registration
+    // Prevent form submission if validation fails
+    if (!isValid) {
+      event.preventDefault(); // Prevent form submission
     }
   }
   
   // Function to validate the login form
   function validateLoginForm(event) {
-    event.preventDefault(); // Prevent the form from submitting
     const email = document.getElementById('loginEmail').value.trim();
     const password = document.getElementById('loginPassword').value.trim();
   
@@ -94,7 +86,10 @@ function validateSignUpForm(event) {
         } else {
             document.getElementById('emailError').innerText = 'Invalid email or password.';
             isValid = false;
+            event.preventDefault(); // Prevent form submission if credentials are incorrect
         }
+    } else {
+      event.preventDefault(); // Prevent form submission if validation fails
     }
   }
   
@@ -105,14 +100,6 @@ function validateSignUpForm(event) {
         return JSON.parse(storedData); // Convert JSON string back to object
     }
     return null; // Return null if no user data is found
-  }
-  
-  // Function to check if user is logged in
-  function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-    if (isLoggedIn === 'true') {
-        window.location.href = 'home.html'; // Redirect to home page if already logged in
-    }
   }
   
   // Add event listeners for form submissions
@@ -126,8 +113,5 @@ function validateSignUpForm(event) {
       if (loginForm) {
           loginForm.addEventListener('submit', validateLoginForm);
       }
-      
-      // Check login status on page load
-      checkLoginStatus();
   });
   

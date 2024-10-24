@@ -11,7 +11,7 @@
     <div class="container">
         <div class="box">
             <div class="logo">AITUwka</div>
-            <form id="signUpForm" action="home.html" method="get" onsubmit="return validateSignUpForm()">
+            <form id="signUpForm">
                 <input type="text" class="form-control" id="username" placeholder="Username">
                 <span id="usernameError" style="color: red;"></span>
             
@@ -27,13 +27,28 @@
                 <button type="submit" class="btn btn-primary">Sign Up</button>
             </form>            
             <div class="link">
-                <p><a href="Login.html">Already have an account? Log in</a></p>
+                <p><a href="login.html">Already have an account? Log in</a></p>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="welcomeModalLabel">Добро пожаловать!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="welcomeMessage">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="signup.js"></script> 
+    <script src="login.js"></script> 
     <script>
         document.getElementById('loginForm').onsubmit = function() {
             localStorage.setItem('showWelcomeModal', 'true');

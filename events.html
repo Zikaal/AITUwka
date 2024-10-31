@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <nav class="navbar navigate navbar-expand-lg navbar-light bg-light px-4">
             <a id="navbar-brand" href="home.html" data-en="AITUwka" data-ru="АЙТУшка">AITUwka</a>
             <button class="sidebar-toggle-btn" id="sidebarToggleBtn" data-en="☰" data-ru="☰">☰</button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -32,13 +32,11 @@
     
     <aside class="sidebar col-md-2">
         <a href="user.html" tabindex="0" data-en="Boris Johnson" data-ru="Борис Джонсон">Boris Johnson</a>
-        <a href="#" tabindex="0" data-en="Search For Friends" data-ru="Искать друзей">Search For Friends</a>
-        <a href="saves.html" tabindex="0" data-en="Saved" data-ru="Сохраненные">Saved</a>
+        <a href="saves.html" tabindex="0" data-en="Search For Friends" data-ru="Искать друзей">Search For Friends</a>
         <a href="group.html" tabindex="0" data-en="Groups" data-ru="Группы">Groups</a>
-        <a href="#" tabindex="0" data-en="Videos" data-ru="Видео">Videos</a>
         <a href="marketplace.html" tabindex="0" data-en="Marketplace" data-ru="Маркетплейс">Marketplace</a>
         <a href="events.html" tabindex="0" data-en="Events" data-ru="События">Events</a>
-
+        
         <div class="language-selector">
             <label for="language" data-en="Select Language:" data-ru="Выберите язык:">Select Language:</label>
             <select id="language" class="form-select">
@@ -60,7 +58,7 @@
                 <div class="card-body">
                     <h5 class="card-title" data-en="World Nomad Games" data-ru="Игры кочевников">World Nomad Games</h5>
                     <p class="card-text" data-en="Sunday, 08:00, Astana" data-ru="Воскресенье, 08:00, Астана">Sunday, 08:00, Astana</p>
-                    <a href="#" class="btn btn-primary btn-sm" data-en="Interested" data-ru="Интересует">Interested</a>
+                    <a href="#" class="event-button" data-id="1" data-en="Interested" data-ru="Интересует">Interested</a>
                 </div>
             </div>
     
@@ -69,7 +67,7 @@
                 <div class="card-body">
                     <h5 class="card-title" data-en="06.11 | SKILLET | ASTANA" data-ru="06.11 | SKILLET | АСТАНА">06.11 | SKILLET | ASTANA</h5>
                     <p class="card-text" data-en="Wednesday, 22:00, Astana" data-ru="Среда, 22:00, Астана">Wednesday, 22:00, Astana</p>
-                    <a href="#" class="btn btn-primary btn-sm" data-en="Interested" data-ru="Интересует">Interested</a>
+                    <a href="#" class="event-button" data-id="2" data-en="Interested" data-ru="Интересует">Interested</a>
                 </div>
             </div>
     
@@ -78,17 +76,18 @@
                 <div class="card-body">
                     <h5 class="card-title" data-en="NET24 2024" data-ru="NET24 2024">NET24 2024</h5>
                     <p class="card-text" data-en="Friday, 11:00, Astana" data-ru="Пятница, 11:00, Астана">Friday, 11:00, Astana</p>
-                    <a href="#" class="btn btn-primary btn-sm" data-en="Interested" data-ru="Интересует">Interested</a>
+                    <a href="#" class="event-button" data-id="3" data-en="Interested" data-ru="Интересует">Interested</a>
                 </div>
             </div>
             </div>
         </section>
     </main>
-
+    <script src="event.js"></script>
     <script src="checkbox.js"></script>
     <script src="language.js"></script> 
     <script src="sidebar.js"></script>
     <script src="keydown.js"></script>
+    <script src="changeuser.js"></script>
         
 </body>
 </html>

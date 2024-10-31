@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <nav class="navbar navigate navbar-expand-lg navbar-light bg-light px-4">
             <a id="navbar-brand" href="home.html" data-en="AITUwka" data-ru="АЙТУшка">AITUwka</a>
             <button class="sidebar-toggle-btn" id="sidebarToggleBtn">☰</button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -33,10 +33,8 @@
     
     <aside class="sidebar col-md-2">
         <a href="user.html" tabindex="0" data-en="Boris Johnson" data-ru="Борис Джонсон">Boris Johnson</a>
-        <a href="#" tabindex="0" data-en="Search For Friends" data-ru="Поиск друзей">Search For Friends</a>
-        <a href="saves.html" tabindex="0" data-en="Saved" data-ru="Сохраненные">Saved</a>
+        <a href="saves.html" tabindex="0" data-en="Search For Friends" data-ru="Искать друзей">Search For Friends</a>
         <a href="group.html" tabindex="0" data-en="Groups" data-ru="Группы">Groups</a>
-        <a href="#" tabindex="0" data-en="Videos" data-ru="Видеозаписи">Videos</a>
         <a href="marketplace.html" tabindex="0" data-en="Marketplace" data-ru="Маркетплейс">Marketplace</a>
         <a href="events.html" tabindex="0" data-en="Events" data-ru="События">Events</a>
 
@@ -52,57 +50,86 @@
 
     <main id="content" class="p-5">
         <section id="marketplace-section">
-            <h2 class="section-title mb-4" data-en="Marketplace - Pick of the Day" data-ru="Маркетплейс - Выбор дня">Marketplace - Pick of the Day</h2>
 
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title" data-en="Marketplace - Pick of the Day" data-ru="Маркетплейс - Выбор дня">Marketplace - Pick of the Day</h2>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-en="Categories" data-ru="Категории">
+                        
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                        <li><a class="dropdown-item" href="#" data-category="all" data-en="All" data-ru="Все"></a></li>
+                        <li><a class="dropdown-item" href="#" data-category="tech" data-en="Tech" data-ru="Техника"></a></li>
+                        <li><a class="dropdown-item" href="#" data-category="books" data-en="Books" data-ru="Книги"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+        
             <div class="grid-container">
-                <div class="market-item">
+                <div class="market-item" data-category="books" data-item="item-1">
                     <img src="img/calculus.jpg" class="market-img" alt="Calculus">
                     <div class="item-info">
-                        <h3 class="item-title" data-en="Calculus: Early Transcendentals" data-ru="Калькулятор: Ранние трансценденталы">Calculus: Early Transcendentals</h3>
-                        <p class="item-price" data-en="7,554 KZT" data-ru="7 554 KZT">7 554 KZT</p>
-                        <button class="btn btn-primary" data-en="Buy" data-ru="Купить">Buy</button> 
+                        <h3 class="item-title">Calculus: Early Transcendentals</h3>
+                        <p class="item-price">7,554 KZT</p>
+                        <button class="btn btn-primary" id="item-1">Buy</button>
+                        <div class="purchase-notification" style="display: none;" data-en="Item purchased" data-ru="Товар куплен">Товар куплен</div>
                     </div>
                 </div>
-                <div class="market-item">
+                <div class="market-item" data-category="tech" data-item="item-2">
                     <img src="img/mouse.jpg" class="market-img" alt="Mouse">
                     <div class="item-info">
-                        <h3 class="item-title" data-en="Logitech G305 Wireless Gaming Mouse" data-ru="Беспроводная игровая мышь Logitech G305">Logitech G305 Wireless Gaming Mouse</h3>
-                        <p class="item-price" data-en="33,500 KZT" data-ru="33 500 KZT">33 500 KZT</p>
-                        <button class="btn btn-primary" data-en="Buy" data-ru="Купить">Buy</button> 
+                        <h3 class="item-title">Logitech G305 Wireless Gaming Mouse</h3>
+                        <p class="item-price">33,500 KZT</p>
+                        <button class="btn btn-primary" id="item-2">Buy</button>
+                        <div class="purchase-notification" style="display: none;" data-en="Item purchased" data-ru="Товар куплен">Товар куплен</div>
                     </div>
                 </div>
-                <div class="market-item">
+                <div class="market-item" data-category="books" data-item="item-3">
                     <img src="img/html.jpg" class="market-img" alt="HTML and CSS book">
                     <div class="item-info">
-                        <h3 class="item-title" data-en="HTML and CSS: Design and Build Websites" data-ru="HTML и CSS: Дизайн и создание веб-сайтов">HTML and CSS: Design and Build Websites</h3>
-                        <p class="item-price" data-en="10,000 KZT" data-ru="10 000 KZT">10 000 KZT</p>
-                        <button class="btn btn-primary" data-en="Buy" data-ru="Купить">Buy</button> 
+                        <h3 class="item-title">HTML and CSS: Design and Build Websites</h3>
+                        <p class="item-price">10,000 KZT</p>
+                        <button class="btn btn-primary" id="item-3">Buy</button>
+                        <div class="purchase-notification" style="display: none;" data-en="Item purchased" data-ru="Товар куплен">Товар куплен</div>
                     </div>
                 </div>
-                <div class="market-item">
+                <div class="market-item" data-category="books" data-item="item-4">
                     <img src="img/c++.jpg" class="market-img" alt="C++">
                     <div class="item-info">
-                        <h3 class="item-title" data-en="Effective Modern C++" data-ru="Эффективный современный C++">Effective Modern C++</h3>
-                        <p class="item-price" data-en="12,000 KZT" data-ru="12 000 KZT">12 000 KZT</p>
-                        <button class="btn btn-primary" data-en="Buy" data-ru="Купить">Buy</button> 
+                        <h3 class="item-title">Effective Modern C++</h3>
+                        <p class="item-price">12,000 KZT</p>
+                        <button class="btn btn-primary" id="item-4">Buy</button>
+                        <div class="purchase-notification" style="display: none;" data-en="Item purchased" data-ru="Товар куплен">Товар куплен</div>
                     </div>
                 </div>
-                <div class="market-item">
+                <div class="market-item" data-category="tech" data-item="item-5">
                     <img src="img/ipad.jpg" class="market-img" alt="iPad">
                     <div class="item-info">
-                        <h3 class="item-title" data-en="iPad 10.9 (10 Gen), 256 GB, Wi-Fi, Silver, 2022 (MPQ83)" data-ru="iPad 10.9 (10-е поколение), 256 ГБ, Wi-Fi, Серебристый, 2022 (MPQ83)">iPad 10.9 (10 Gen), 256 GB, Wi-Fi, Silver, 2022 (MPQ83)</h3>
-                        <p class="item-price" data-en="334,990 KZT" data-ru="334 990 KZT">334 990 KZT</p>
-                        <button class="btn btn-primary" data-en="Buy" data-ru="Купить">Buy</button> 
+                        <h3 class="item-title">iPad 10.9 (10 Gen), 256 GB, Wi-Fi, Silver, 2022 (MPQ83)</h3>
+                        <p class="item-price">334,990 KZT</p>
+                        <button class="btn btn-primary" id="item-5">Buy</button>
+                        <div class="purchase-notification" style="display: none;" data-en="Item purchased" data-ru="Товар куплен">Товар куплен</div>
                     </div>
                 </div>
             </div>
 
         </section>
+        
+        
+        
     </main>
 
     <script src="checkbox.js"></script>
+    <script src="filter.js"></script>
     <script src="language.js"></script> 
     <script src="sidebar.js"></script>
     <script src="keydown.js"></script>
+    <script src="changeuser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>

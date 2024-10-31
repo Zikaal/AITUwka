@@ -60,3 +60,39 @@
 .about_button:hover {
     background-color: #218838;
 }
+
+
+.modal.night-mode .modal-content {
+    background-color: #222; /* Dark background color for the modal content */
+    color: #ddd; /* Light text color for the modal content */
+}
+
+.modal.night-mode .close {
+    color: #ddd; /* Light text color for the close button */
+}
+
+.modal.night-mode .close:hover,
+.modal.night-mode .close:focus {
+    color: #fff; /* White text color for the close button on hover */
+}
+
+#contactForm.night-mode {
+    background-color: #222; /* Dark background color for the contact form */
+    color: #ddd; /* Light text color for the contact form */
+}
+
+#contactForm.night-mode input,
+#contactForm.night-mode textarea {
+    background-color: #333; /* Dark background color for the contact form inputs and textarea */
+    color: #ddd; /* Light text color for the contact form inputs and textarea */
+    border: 1px solid #444; /* Dark border color for the contact form inputs and textarea */
+}
+
+.about_button.night-mode {
+    background-color: #444; /* Dark background color for the about button */
+    color: #ddd; /* Light text color for the about button */
+}
+
+.about_button.night-mode:hover {
+    background-color: #555; /* Slightly darker background color for the about button on hover */
+}

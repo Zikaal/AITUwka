@@ -4,13 +4,7 @@
     align-items: center; 
 }
 
-.btn.btn-primary.btn-sm {
-    width: 100px; 
-    height: 30px; 
-    font-size: 14px; 
-    margin: 10px auto; 
-    display: block; 
-}
+
 
 .card-img-top {
     width: 100%; 
@@ -65,16 +59,33 @@
 }
 
 .event-button {
+    width: 100px; 
+    height: 30px; 
+    font-size: 14px; 
+    margin: 10px auto; 
+    display: flex;
+    align-items: center; /* Вертикальное центрирование текста */
+    justify-content: center; /* Горизонтальное центрирование текста */
     padding: 10px;
     border-radius: 5px;
     border: none;
     background-color: #4267b2;
     color: white;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
 }
 
 .event-button:hover {
     background-color: #abb4c5;
     transform: scale(1.05);
 }
+
+.event-button.picked {
+    background-color: lightgray; /* Светло-серый фон */
+    color: black; /* Чёрный текст */
+    transform: scale(1); /* Убираем увеличение при выборе */
+}
+
+/* Стили для обычной кнопки Interested */
+
 

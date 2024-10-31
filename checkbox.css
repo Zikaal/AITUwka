@@ -6,7 +6,21 @@ body.night-mode {
 body.night-mode header {
     background-color: #282c34; /* Darker header color */
 }
+header.night-mode .navigate{
+    background-color: #343a40 !important; /* Серый фон для секций хобби, фильмов и книг */
+    color: white !important; /* Белый текст для этих секций */
+}
+header.night-mode .sidebar-toggle-btn{
+    color:white
 
+}
+header.night-mode .nav-link {
+    color: #f8f9fa !important;; /* Белый текст для навигационных ссылок */
+}
+
+header.night-mode .nav-link.active {
+    color: #ffffff !important;; /* Цвет активной ссылки */
+}
 
 body.night-mode .sidebar {
     background-color: #282c34; /* Dark sidebar color */
@@ -65,6 +79,16 @@ body.night-mode .description {
     color: white;
 }
 
+body.night-mode .profile-header {
+    background-color:#343a40 !important;
+    color: white !important;
+}
+
+body.night-mode .logout-section {
+    background-color:#343a40 !important;
+    color: white !important;
+}
+
 body.night-mode .description-detail {
     color: #e2e2e2;
 }
@@ -114,6 +138,8 @@ body.night-mode .bg-toggle {
 body.night-mode .bg-label {
     color: #e2e2e2;
 }
+
+.nav-link.night-mode
 
 .theme-toggle {
     position: relative;
@@ -263,13 +289,7 @@ body.night-mode .main {
     color: white !important;  Белый текст внутри 
 } */
 
-body.night-mode .carousel-item {
-    background-color: #343a40 !important; /* Серый фон для элементов карусели */
-}
 
-body.night-mode .carousel-caption {
-    color: white !important; /* Белый текст для подписи карусели */
-}
 
 
 
@@ -309,4 +329,5 @@ body.night-mode .description-section {
     background-color: #343a40; /* Темно-серый фон для ночного режима */
     color: #e2e2e2; /* Светло-серый цвет текста */
 }
+
 

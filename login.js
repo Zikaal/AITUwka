@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function validateSignUpForm(event) {
-    const username = document.getElementById('username').value.trim();
+    const firstname = document.getElementById('firstname').value.trim();
+    const lastname = document.getElementById('lastname').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
     const confirmPassword = document.getElementById('confirm-password').value.trim();
@@ -19,14 +20,19 @@ function validateSignUpForm(event) {
     let isValid = true;
 
     // Очистка предыдущих сообщений об ошибках
-    document.getElementById('usernameError').innerText = '';
+    document.getElementById('firstnameError').innerText = '';
+    document.getElementById('lastnameError').innerText = '';
     document.getElementById('emailError').innerText = '';
     document.getElementById('passwordError').innerText = '';
     document.getElementById('confirmPasswordError').innerText = '';
 
     // Проверка полей
-    if (username === '') {
-        document.getElementById('usernameError').innerText = 'Username is required.';
+    if (firstname === '') {
+        document.getElementById('firstnameError').innerText = 'Firstname is required.';
+        isValid = false;
+    }
+    if (lastname === '') {
+        document.getElementById('lastnameError').innerText = 'Lastname is required.';
         isValid = false;
     }
 
@@ -58,12 +64,14 @@ function validateSignUpForm(event) {
     // Сохранение данных в localStorage, если проверка прошла успешно
     if (isValid) {
         const userData = {
-            username: username,
+            fisrtname: firstname,
+            lastname: lastname,
             email: email,
             password: password,
         };
         localStorage.setItem('userData', JSON.stringify(userData));
     }
+    
 
     // Предотвращение отправки формы, если проверка не удалась
     if (!isValid) {

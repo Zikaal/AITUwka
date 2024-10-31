@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeToggleCheckbox = document.getElementById('themeToggleCheckbox');
     const body = document.body;
     const header = document.querySelector('header');
-    const footer = document.querySelector('footer');
     const sidebar = document.querySelector('.sidebar');
     const modal = document.querySelector('.modal'); 
     const contactForm = document.querySelector('#contactForm'); 
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function applyNightMode(isNightMode) {
         body.classList.toggle('night-mode', isNightMode);
         header.classList.toggle('night-mode', isNightMode);
-        footer.classList.toggle('night-mode', isNightMode);
         sidebar.classList.toggle('night-mode', isNightMode);
         modal.classList.toggle('night-mode', isNightMode); 
         contactForm.classList.toggle('night-mode', isNightMode);

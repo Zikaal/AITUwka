@@ -50,11 +50,10 @@
     <script src="login.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Check for welcome modal trigger
             if (localStorage.getItem('showWelcomeModal') === 'true') {
                 const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
                 welcomeModal.show();
-                localStorage.removeItem('showWelcomeModal'); // Clear the trigger
+                localStorage.removeItem('showWelcomeModal'); 
             }
         });
     </script>

@@ -688,6 +688,7 @@ input[type="checkbox"]:checked::before {
 }
 
 /* General mobile styles */
+/* General mobile styles */
 @media (max-width: 768px) {
     .navbar-collapse {
         flex-direction: column; /* Stack items vertically */
@@ -724,8 +725,29 @@ input[type="checkbox"]:checked::before {
         display: none; /* Hide sidebar on mobile */
     }
 
-    .content {
+    .content-user {
         width: 100%; /* Full width for content */
+    }
+
+    /* Toggle sidebar on mobile */
+    .sidebar-toggle-btn {
+        display: block; /* Show sidebar toggle button on mobile */
+    }
+
+    #sidebar {
+        position: fixed; /* Fix sidebar position */
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width for sidebar */
+        height: 100vh; /* Full height for sidebar */
+        background-color: #f0f0f0; /* Light gray background */
+        padding: 20px; /* Add padding for better spacing */
+        transform: translateX(-100%); /* Hide sidebar by default */
+        transition: transform 0.3s ease-in-out; /* Animate sidebar toggle */
+    }
+
+    #sidebar.show {
+        transform: translateX(0); /* Show sidebar when toggle button is clicked */
     }
 }
 

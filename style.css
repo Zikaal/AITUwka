@@ -687,65 +687,7 @@ input[type="checkbox"]:checked::before {
     }
 }
 
-/* General mobile styles */
-@media (max-width: 768px) {
-    .navbar-collapse {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
 
-    .navbar-nav {
-        width: 100%; /* Full width for navbar links */
-    }
-
-    .nav-item {
-        width: 100%; /* Full width for each nav item */
-    }
-
-    .nav-link {
-        text-align: left; /* Align text to the left */
-        padding: 10px; /* Add padding for better touch targets */
-    }
-
-    .theme-toggle {
-        margin: 10px 0; /* Add margin for better spacing */
-    }
-
-    .profile-pic {
-        height: 40px; /* Adjust profile picture size */
-    }
-
-    .form-control {
-        width: 100%; /* Full width for search bar */
-        margin-top: 10px; /* Add space above */
-    }
-
-    .sidebar {
-        display: none; /* Hide sidebar on mobile */
-    }
-
-    .content-user {
-        width: 100%; /* Full width for content */
-    }
-
-    /* Toggle sidebar on mobile */
-    .sidebar-toggle-btn {
-        display: block; /* Show sidebar toggle button on mobile */
-    }
-
-    #sidebar {
-        position: fixed; /* Fix sidebar position */
-        top: 0;
-        left: 0;
-        width: 100%; /* Full width for sidebar */
-        height: 100vh; /* Full height for sidebar */
-        background-color: #f0f0f0; /* Light gray background */
-        padding: 20px; /* Add padding for better spacing */
-        transform: translateX(-100%); /* Hide sidebar by default */
-        transition: transform 0.3s ease-in-out; /* Animate sidebar toggle */
-    }
-
-}
 
 
 

@@ -665,11 +665,6 @@ input[type="checkbox"]:checked::before {
         font-size: 18px; /* Adjust heading size */
     }
 
-    footer {
-        font-size: 12px;
-        padding: 10px;
-    }
-
     .modal-content {
         padding: 20px; /* Increase padding for modal */
     }
@@ -691,7 +686,6 @@ input[type="checkbox"]:checked::before {
         margin-top: 20px; /* Adjust margin for background toggle */
     }
 }
-
 
 
 

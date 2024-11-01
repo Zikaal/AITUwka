@@ -688,7 +688,6 @@ input[type="checkbox"]:checked::before {
 }
 
 /* General mobile styles */
-/* General mobile styles */
 @media (max-width: 768px) {
     .navbar-collapse {
         flex-direction: column; /* Stack items vertically */
@@ -746,11 +745,7 @@ input[type="checkbox"]:checked::before {
         transition: transform 0.3s ease-in-out; /* Animate sidebar toggle */
     }
 
-    #sidebar.show {
-        transform: translateX(0); /* Show sidebar when toggle button is clicked */
-    }
 }
-
 
 
 

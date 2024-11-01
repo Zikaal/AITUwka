@@ -687,18 +687,11 @@ input[type="checkbox"]:checked::before {
     }
 }
 
+/* General mobile styles */
 @media (max-width: 768px) {
-    .sidebar {
-        display: block; /* Ensure sidebar is block on mobile */
-    }
-
-    .sidebar.open {
-        left: 0; /* Show the sidebar when open */
-    }
-
     .navbar-collapse {
-        display: flex !important; /* Ensure navbar items are visible */
-        flex-direction: column; /* Stack navbar items vertically */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
     }
 
     .navbar-nav {
@@ -713,8 +706,20 @@ input[type="checkbox"]:checked::before {
         text-align: left; /* Align text to the left */
         padding: 10px; /* Add padding for better touch targets */
     }
-}
 
+    .theme-toggle {
+        margin: 10px 0; /* Add margin for better spacing */
+    }
+
+    .profile-pic {
+        height: 40px; /* Adjust profile picture size */
+    }
+
+    .form-control {
+        width: 100%; /* Full width for search bar */
+        margin-top: 10px; /* Add space above */
+    }
+}
 
 
 

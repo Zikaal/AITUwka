@@ -687,6 +687,34 @@ input[type="checkbox"]:checked::before {
     }
 }
 
+@media (max-width: 768px) {
+    .sidebar {
+        display: block; /* Ensure sidebar is block on mobile */
+    }
+
+    .sidebar.open {
+        left: 0; /* Show the sidebar when open */
+    }
+
+    .navbar-collapse {
+        display: flex !important; /* Ensure navbar items are visible */
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navbar-nav {
+        width: 100%; /* Full width for navbar links */
+    }
+
+    .nav-item {
+        width: 100%; /* Full width for each nav item */
+    }
+
+    .nav-link {
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Add padding for better touch targets */
+    }
+}
+
 
 
 

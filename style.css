@@ -601,46 +601,68 @@ input[type="checkbox"]:checked::before {
 
 
 
+/* General mobile styles */
 @media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+    }
+
     .sidebar {
-        display: none;
+        display: none; /* Hide sidebar on small screens */
         width: 100%;
         position: relative;
         margin-bottom: 20px;
     }
 
     .sidebar-toggle-btn {
-        display: inline-block; 
-    }
-
-    .sidebar.open {
-        display: block; 
+        display: inline-block;
+        margin-left: auto;
+        margin-bottom: 10px;
     }
 
     .content {
-        margin-left: 0;
+        margin-left: 0; /* Remove left margin */
         padding: 10px;
     }
 
-    .post-image {
-        width: 100%; 
-    }
-
-    .profile-pic {
-        height: 30px;
-    }
-
-    .post-actions {
-        flex-direction: column;
-    }
-
-    .new-post h2, .post h2 {
-        font-size: 18px;
+    .post-title, .post-textarea {
+        width: 100%; /* Full width for inputs */
     }
 
     .submit-btn {
-        width: 100%;
-        padding: 10px;
+        width: 100%; /* Full width for buttons */
+    }
+
+    .profile-pic {
+        height: 30px; /* Adjust profile picture size */
+    }
+
+    .new-post h2, .post h2 {
+        font-size: 18px; /* Adjust heading size */
     }
 
     footer {
@@ -648,46 +670,25 @@ input[type="checkbox"]:checked::before {
         padding: 10px;
     }
 
-    header .navbar {
-        flex-direction: column; 
+    .modal-content {
+        padding: 20px; /* Increase padding for modal */
     }
 
-    .profile-info {
-        flex-direction: column;
-        align-items: flex-start;
+    .language-selector {
+        margin-bottom: 15px; /* Add margin for better spacing */
     }
 
-    .profile-pic {
-        width: 60px;
-        height: 60px;
+    #current-time {
+        font-size: 16px; /* Adjust font size */
+        padding: 10px; /* Adjust padding */
     }
 
-    .profile-header {
-        margin-left: 0;
-        padding: 10px;
+    .theme-toggle {
+        margin: 10px 0; /* Add margin for better spacing */
     }
 
-    .edit-profile-btn {
-        width: auto; 
-    }
-}
-
-@media (max-width: 576px) {
-    .navbar-brand {
-        font-size: 20px;
-    }
-
-    .navbar-collapse {
-        text-align: center;
-    }
-
-    .post h2 {
-        font-size: 16px;
-    }
-
-    .post-image {
-        width: 100%;
-        max-width: 100%;
+    .bg-toggle {
+        margin-top: 20px; /* Adjust margin for background toggle */
     }
 }
 

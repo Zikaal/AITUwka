@@ -719,8 +719,15 @@ input[type="checkbox"]:checked::before {
         width: 100%; /* Full width for search bar */
         margin-top: 10px; /* Add space above */
     }
-}
 
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .content {
+        width: 100%; /* Full width for content */
+    }
+}
 
 
 

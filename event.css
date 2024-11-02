@@ -87,11 +87,12 @@
 }
 
 /* Адаптивные стили для мобильных устройств */
+/* Адаптивные стили для мобильных устройств */
 @media (max-width: 600px) {
-    /* Основной контент */
+    /* Основной контент и секция событий */
     #content, #events-section {
-        margin-left: 0 !important;
-        padding: 15px !important;
+        margin: 0 auto !important;
+        padding: 10px !important;
         max-width: 100% !important;
         width: 100% !important;
         text-align: center !important;
@@ -104,7 +105,7 @@
         margin-bottom: 10px !important;
     }
 
-    /* Элементы событий в вертикальном формате */
+    /* Событие в вертикальном формате */
     .event-item {
         display: flex !important;
         flex-direction: column !important;
@@ -112,19 +113,22 @@
         padding: 15px !important;
         border: 1px solid #ddd !important;
         border-radius: 8px !important;
-        margin-bottom: 15px !important;
+        margin: 10px 0 !important;
         width: 100% !important;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
     }
 
+    /* Изображение события */
     .event-img {
         width: 100% !important;
         height: auto !important;
         max-width: 100% !important;
         margin-bottom: 10px !important;
         border-radius: 8px !important;
+        object-fit: cover !important;
     }
 
+    /* Информация о событии */
     .event-info {
         text-align: center !important;
         width: 100% !important;
@@ -140,18 +144,23 @@
         font-size: 14px !important;
         margin: 5px 0 !important;
         width: 100% !important;
+        color: #555 !important;
     }
 
-    /* Кнопка действия */
+    /* Кнопка участия */
     .event-button {
-        width: 80% !important;
+        width: 90% !important;
         max-width: 200px !important;
         font-size: 14px !important;
         padding: 10px !important;
         margin: 10px auto !important;
         text-align: center !important;
+        background-color: #4267b2 !important;
+        color: white !important;
+        border-radius: 5px !important;
     }
 }
+
 
 
 

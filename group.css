@@ -135,3 +135,120 @@ h4{
 .postbt:hover {
     transform: scale(1.1);
 }
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 600px) {
+    /* Основной контейнер группы */
+    .group {
+        padding: 15px !important;
+        margin-left: 0 !important;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Заголовок */
+    h3 {
+        font-size: 20px !important;
+        padding-bottom: 8px;
+        text-align: center;
+    }
+
+    /* Элементы группы в вертикальном формате */
+    .group-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .futsal {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .group-info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .discr-group {
+        font-size: 13px;
+        margin: 4px 0;
+    }
+
+    /* Кнопка участника */
+    .member-bt {
+        font-size: 12px;
+        padding: 5px 10px;
+        width: 100%;
+        max-width: 150px;
+    }
+
+    /* Посты */
+    .post {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .post-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .data-grp {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .cmnt {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    /* Действия с постом */
+    .post-actions0 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .action-btn, .postbt {
+        width: 100%;
+        max-width: 150px;
+        font-size: 14px;
+        padding: 8px;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    /* Секция комментариев */
+    .comment-section {
+        margin-top: 15px;
+    }
+
+    /* Текстовое поле */
+    .textarea-group {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+}

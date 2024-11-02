@@ -116,39 +116,51 @@
 
 /* Стили для мобильных устройств */
 @media (max-width: 600px) {
+    /* Центровка и сжатие основного контента */
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Основные блоки и заголовки */
     .new-post, .post {
-        padding: 15px;
-        margin-bottom: 15px;
+        padding: 10px;
+        margin-bottom: 10px;
     }
 
     .new-post h2, .post h2 {
         font-size: 18px;
+        text-align: center;
     }
 
+    /* Поля ввода текста */
     .post-textarea, .post-title {
         width: 100%;
         font-size: 14px;
-        padding: 10px;
+        padding: 8px;
     }
 
+    /* Кнопки отправки и действий */
     .submit-btn, .action-btn {
         font-size: 14px;
         padding: 10px;
-    }
-
-    #current-time {
-        font-size: 16px;
-        padding: 10px;
+        width: 100%;
     }
 
     .post-actions {
         flex-direction: column;
         align-items: stretch;
+        gap: 10px;
     }
 
     .action-btn {
+        margin-top: 5px;
+    }
+
+    /* Текущий время */
+    #current-time {
+        font-size: 16px;
+        padding: 8px;
         margin-top: 10px;
     }
 }
-
-

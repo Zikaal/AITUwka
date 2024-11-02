@@ -183,18 +183,25 @@
     margin-bottom: 50px;
 }
 
+/* Стили для мобильных устройств */
 @media (max-width: 600px) {
-    /* Убираем лишние отступы и центруем элементы */
-    .profile-header, .info, .description, .Hobbies, .Movies, .Quotes, .Books {
-        margin-left: 0;
+    /* Центровка и сжатие основного контента */
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .profile-header, .info, .logout-section, .description, .Hobbies, .Movies, .Quotes, .Books {
+        margin: 0 auto;
         padding: 10px;
+        max-width: 100%;
         text-align: center;
     }
 
+    /* Адаптация шапки профиля */
     .profile-header {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
     }
 
     .profile-user {
@@ -231,6 +238,13 @@
         font-size: 14px;
     }
 
+    /* Упрощение списка интересов и фильмов */
+    .Hobbies ul, .Movies ol {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    /* Адаптация кнопок действий */
     .post-actions {
         flex-direction: column;
         align-items: stretch;
@@ -238,15 +252,21 @@
 
     .action-btn {
         margin-top: 5px;
+        width: 100%;
     }
 
-    /* Дополнительные стили для упрощения списка интересов и фильмов */
-    .Hobbies, .Movies {
-        text-align: left;
-        padding: 10px;
+    /* Дополнительные стили для мобильной версии */
+    .description, .Hobbies, .Movies, .Quotes, .Books {
+        text-align: center;
     }
 
-    .Hobbies ul, .Movies ol {
-        padding-left: 20px;
+    .section-heading, .form-label {
+        text-align: center;
+    }
+
+    /* Убираем отступы слева */
+    .info, .logout-section, .description, .Hobbies, .Movies, .Quotes, .Books {
+        margin-left: 0;
     }
 }
+

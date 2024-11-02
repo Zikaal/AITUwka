@@ -118,49 +118,49 @@
 @media (max-width: 600px) {
     /* Центровка и сжатие основного контента */
     body {
-        padding: 0;
-        margin: 0;
+        padding: 0 !important;
+        margin: 0 !important;
     }
     
     /* Основные блоки и заголовки */
     .new-post, .post {
-        padding: 10px;
-        margin-bottom: 10px;
+        padding: 10px !important;
+        margin-bottom: 10px !important;
     }
 
     .new-post h2, .post h2 {
-        font-size: 18px;
-        text-align: center;
+        font-size: 18px !important;
+        text-align: center !important;
     }
 
     /* Поля ввода текста */
     .post-textarea, .post-title {
-        width: 100%;
-        font-size: 14px;
-        padding: 8px;
+        width: 100% !important;
+        font-size: 14px !important;
+        padding: 8px !important;
     }
 
     /* Кнопки отправки и действий */
     .submit-btn, .action-btn {
-        font-size: 14px;
-        padding: 10px;
-        width: 100%;
+        font-size: 14px !important;
+        padding: 10px !important;
+        width: 100% !important;
     }
 
     .post-actions {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
     }
 
     .action-btn {
-        margin-top: 5px;
+        margin-top: 5px !important;
     }
 
     /* Текущий время */
     #current-time {
-        font-size: 16px;
-        padding: 8px;
-        margin-top: 10px;
+        font-size: 16px !important;
+        padding: 8px !important;
+        margin-top: 10px!important;
     }
 }

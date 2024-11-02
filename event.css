@@ -92,44 +92,44 @@
     #content, #events-section {
         margin-left: 0 !important;
         padding: 15px !important;
-        max-width: 100%;
-        text-align: center;
+        max-width: 100% !important;
+        text-align: center !important;
     }
 
     /* Заголовок секции */
     .section-title {
         font-size: 18px !important;
-        text-align: center;
-        margin-bottom: 10px;
+        text-align: center !important;
+        margin-bottom: 10px !important;
     }
 
     /* Элементы событий в вертикальном формате */
     .event-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 15px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-bottom: 15px !important;
     }
 
     .event-img {
         width: 100% !important;
         height: auto !important;
-        max-width: 300px;
-        margin-bottom: 10px;
+        max-width: 300px !important;
+        margin-bottom: 10px !important;
     }
 
     .event-info {
-        text-align: center;
+        text-align: center !important;
     }
 
     .event-title {
         font-size: 16px !important;
-        margin: 5px 0;
+        margin: 5px 0 !important;
     }
 
     .event-details {
-        font-size: 14px;
-        margin: 5px 0;
+        font-size: 14px !important;
+        margin: 5px 0 !important;
     }
 
     /* Кнопка действия */
@@ -138,8 +138,8 @@
         max-width: 150px !important;
         font-size: 14px !important;
         padding: 8px !important;
-        margin: 10px auto;
-        text-align: center;
+        margin: 10px auto !important;
+        text-align: center !important;
     }
 }
 

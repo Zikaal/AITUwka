@@ -93,6 +93,7 @@
         margin-left: 0 !important;
         padding: 15px !important;
         max-width: 100% !important;
+        width: 100% !important;
         text-align: center !important;
     }
 
@@ -108,36 +109,45 @@
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        padding: 15px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
         margin-bottom: 15px !important;
+        width: 100% !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
     }
 
     .event-img {
         width: 100% !important;
         height: auto !important;
-        max-width: 300px !important;
+        max-width: 100% !important;
         margin-bottom: 10px !important;
+        border-radius: 8px !important;
     }
 
     .event-info {
         text-align: center !important;
+        width: 100% !important;
     }
 
     .event-title {
         font-size: 16px !important;
         margin: 5px 0 !important;
+        width: 100% !important;
     }
 
     .event-details {
         font-size: 14px !important;
         margin: 5px 0 !important;
+        width: 100% !important;
     }
 
     /* Кнопка действия */
     .event-button {
         width: 80% !important;
-        max-width: 150px !important;
+        max-width: 200px !important;
         font-size: 14px !important;
-        padding: 8px !important;
+        padding: 10px !important;
         margin: 10px auto !important;
         text-align: center !important;
     }

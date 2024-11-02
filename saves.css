@@ -71,39 +71,39 @@ h3 {
     transform: scale(1.05);
 }
 
-/* Стили для мобильных устройств */
+/* Центровка и сжатие основного контента на мобильных устройствах */
 @media (max-width: 600px) {
-    body {
-        padding: 0;
-        margin: 0;
-    }
-    /* Общие отступы для компактного отображения */
-    .saves, .content {
-        margin-left: 0;
-        padding: 15px;
+    /* Сброс общих отступов и центрирование основного блока */
+    body, .saves, .content {
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 100%;
+        text-align: center;
     }
 
-    /* Заголовок */
+    /* Уменьшение отступов для заголовков и контента */
     h2 {
         font-size: 20px;
-        text-align: center;
         padding-bottom: 8px;
     }
 
-    /* Элементы сохранённого контента */
+    /* Компактное отображение сохранённых элементов */
     .saved-item {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 0;
+        padding: 8px 0;
         border-bottom: 1px solid #ddd;
     }
 
+    /* Изображения с уменьшенными размерами */
     .save-png {
         width: 50px;
         height: 50px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
+    /* Центровка и уменьшение текста */
     .saved-info {
         text-align: center;
     }
@@ -115,21 +115,16 @@ h3 {
 
     .saves-che {
         font-size: 13px;
-        margin: 5px 0;
+        margin: 4px 0;
     }
 
-    /* Кнопки действия и сохранения */
+    /* Центровка и сжатие кнопок */
     .action-btn, .saves-btn {
         font-size: 14px;
-        padding: 8px 10px;
-        width: 100%;
-        max-width: 150px;
+        padding: 8px;
+        width: 90%;
+        max-width: 200px;
         margin: 5px auto;
-    }
-
-    /* Сброс отступов для списков */
-    .saved-info p, .saved-info h3 {
-        margin: 5px 0;
     }
 }
 

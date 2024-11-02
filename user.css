@@ -183,24 +183,24 @@
     margin-bottom: 50px;
 }
 
-/* Стили для мобильных устройств */
 @media (max-width: 600px) {
-    .profile-header, .info, .logout-section, .description, .Hobbies, .Movies, .Quotes, .Books {
+    /* Убираем лишние отступы и центруем элементы */
+    .profile-header, .info, .description, .Hobbies, .Movies, .Quotes, .Books {
         margin-left: 0;
-        padding: 15px;
+        padding: 10px;
+        text-align: center;
     }
 
     .profile-header {
         flex-direction: column;
         align-items: center;
-        padding: 15px;
+        padding: 10px;
     }
 
     .profile-user {
         width: 60px;
         height: 60px;
-        margin-right: 0;
-        margin-bottom: 10px;
+        margin: 0 auto 10px;
     }
 
     .profile-info {
@@ -209,23 +209,26 @@
     }
 
     .edit-profile-btn, .submit-btn-user, .logout-btn {
-        font-size: 13px;
+        font-size: 12px;
         padding: 8px;
         width: 100%;
+        max-width: 200px;
+        margin: 5px auto;
     }
 
     .form-select, .form-input {
         width: 100%;
+        max-width: 200px;
+        margin: 5px auto;
     }
 
     .section-heading {
-        font-size: 18px;
-        text-align: center;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     .description-detail, .quote, .description-term {
         font-size: 14px;
-        text-align: center;
     }
 
     .post-actions {
@@ -234,6 +237,16 @@
     }
 
     .action-btn {
-        margin-top: 10px;
+        margin-top: 5px;
+    }
+
+    /* Дополнительные стили для упрощения списка интересов и фильмов */
+    .Hobbies, .Movies {
+        text-align: left;
+        padding: 10px;
+    }
+
+    .Hobbies ul, .Movies ol {
+        padding-left: 20px;
     }
 }

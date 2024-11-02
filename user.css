@@ -188,6 +188,7 @@
     .profile-header, .info, .logout-section, .description, .Hobbies, .Movies, .Quotes, .Books {
         margin-left: 0;
         padding: 15px;
+        width: 100%;
     }
 
     .profile-header {

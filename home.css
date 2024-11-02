@@ -114,4 +114,41 @@
     background-color: #d0e8ff;
 }
 
+/* Стили для мобильных устройств */
+@media (max-width: 600px) {
+    .new-post, .post {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .new-post h2, .post h2 {
+        font-size: 18px;
+    }
+
+    .post-textarea, .post-title {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .submit-btn, .action-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #current-time {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .post-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-btn {
+        margin-top: 10px;
+    }
+}
+
 

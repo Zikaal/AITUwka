@@ -71,41 +71,42 @@ h3 {
     transform: scale(1.05);
 }
 
-/* Центровка и сжатие основного контента на мобильных устройствах */
+/* Адаптивные стили для мобильных устройств */
 @media (max-width: 600px) {
-    /* Сброс общих отступов и центрирование основного блока */
-    body, .saves, .content {
-        margin: 0 auto;
-        padding: 10px;
+    /* Центровка основного блока */
+    .saves, .content {
+        margin-left: 0;
+        padding: 15px;
         max-width: 100%;
         text-align: center;
     }
 
-    /* Уменьшение отступов для заголовков и контента */
+    /* Заголовок */
     h2 {
         font-size: 20px;
+        text-align: center;
         padding-bottom: 8px;
     }
 
-    /* Компактное отображение сохранённых элементов */
+    /* Сохранённые элементы в вертикальном формате */
     .saved-item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 8px 0;
+        padding: 10px 0;
         border-bottom: 1px solid #ddd;
+        text-align: center;
     }
 
-    /* Изображения с уменьшенными размерами */
     .save-png {
         width: 50px;
         height: 50px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
 
-    /* Центровка и уменьшение текста */
     .saved-info {
         text-align: center;
+        margin-bottom: 10px;
     }
 
     h3 {
@@ -118,13 +119,15 @@ h3 {
         margin: 4px 0;
     }
 
-    /* Центровка и сжатие кнопок */
-    .action-btn, .saves-btn {
+    /* Кнопка просмотра выравнена по центру */
+    .saves-btn {
+        width: 100%;
+        max-width: 150px;
         font-size: 14px;
         padding: 8px;
-        width: 90%;
-        max-width: 200px;
-        margin: 5px auto;
+        margin-top: 10px;
+        text-align: center;
     }
 }
+
 

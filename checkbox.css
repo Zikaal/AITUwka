@@ -330,4 +330,11 @@ body.night-mode .description-section {
     color: #e2e2e2; /* Светло-серый цвет текста */
 }
 
-
+body.night-mode #searchfor-friends {
+    background-color: #343a40; /* Темно-серый фон для ночного режима */
+    color: #e2e2e2;
+}
+body.night-mode .btn-sff event-button interested picked {
+    background-color: lightgray; /* Цвет кнопки "Picked" (серый) */
+    color: black; /* Цвет текста на серой кнопке */
+}

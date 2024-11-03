@@ -79,7 +79,7 @@
 }
 
 .event-button.interested {
-    background-color: #29487d; /* Цвет кнопки "Interested" (синий) */
+    background-color: #4267b2; /* Цвет кнопки "Interested" (синий) */
     color: white;
 }
 
@@ -104,6 +104,7 @@
     background-color: lightgray; /* Цвет кнопки "Picked" (серый) */
     color: black; /* Цвет текста на серой кнопке */
 }
+
 
 
 

@@ -47,22 +47,94 @@
         </div>    
     </aside>
 
-    <main class="saves p-5 mt-2">
-        <h2 class="mb-3" data-en="Saved" data-ru="Сохраненные">Saved</h2>
-        <section class="saved-item d-flex align-items-center mb-3">
-            <img src="img/save.png" alt="Saved Item" class="save-png me-3">
-            <section class="saved-info me-3">
-                <h3 class="mb-2" data-en="Item Title" data-ru="Название предмета">Item Title</h3>
-                <p class="saves-che mb-2" data-en="Brief description of the saved item." data-ru="Краткое описание сохраненного предмета.">Brief description of the saved item.</p>
-            </section>
-            <button class="saves-btn btn btn-primary" data-en="View" data-ru="Просмотреть">View</button>
+    <main id="content" class="p-5">
+        <section id="searchfor-friends">
+            <h2 class="section-title mb-4" data-en="Search for friends" data-ru="Искать друзей">Search for friends</h2>
+            
+            <div class="d-flex flex-wrap">
+
+                <div class="card mb-4 me-3" style="width: 15rem;">
+                    <img class="card-img-top" src="img/student1.jpg" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Aruzhan Karimova" data-ru="Аружан Каримова">Aruzhan Karimova</h5>
+                        <p class="card-text" data-en="CS-2309" data-ru="CS-2309">CS-2309</p>
+                        <div class="card-buttons"> 
+                            <a href="#" class="btn event-button interested" data-id="1" data-en="Interested" data-ru="Интересует">Interested</a>
+                            <a href="#" class="btn event-button not-interested" data-id="1" data-en="Delete" data-ru="Удалить">Not Interested</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 me-3" style="width: 15rem;">
+                    <img class="card-img-top" src="img/student2.jpg" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Nursultan Bekzat" data-ru="Нурсултан Бекзат">Nursultan Bekzat</h5>
+                        <p class="card-text" data-en="IT-2308" data-ru="IT-2308">IT-2308</p>
+                        <div class="card-buttons"> 
+                            <a href="#" class="btn event-button interested" data-id="1" data-en="Interested" data-ru="Интересует">Interested</a>
+                            <a href="#" class="btn event-button not-interested" data-id="1" data-en="Delete" data-ru="Удалить">Not Interested</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 me-3" style="width: 15rem;">
+                    <img class="card-img-top" src="img/student3.jpg" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Aigerim Sadykova" data-ru="Айгерим Садыкова">Aigerim Sadykova</h5>
+                        <p class="card-text" data-en="SE-2331" data-ru="SE-2331">SE-2331</p>
+                        <div class="card-buttons"> 
+                            <a href="#" class="btn event-button interested" data-id="1" data-en="Interested" data-ru="Интересует">Interested</a>
+                            <a href="#" class="btn event-button not-interested" data-id="1" data-en="Delete" data-ru="Удалить">Not Interested</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 me-3" style="width: 15rem;">
+                    <img class="card-img-top" src="img/student4.jpg" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Damir Kairat" data-ru="Дамир Кайрат">Damir Kairat</h5>
+                        <p class="card-text" data-en="MCS-2301" data-ru="MCS-2301">MCS-2301</p>
+                        <div class="card-buttons"> 
+                            <a href="#" class="btn event-button interested" data-id="1" data-en="Interested" data-ru="Интересует">Interested</a>
+                            <a href="#" class="btn event-button not-interested" data-id="1" data-en="Delete" data-ru="Удалить">Not Interested</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 me-3" style="width: 15rem;">
+                    <img class="card-img-top" src="img/student5.jpg" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Altynbek Zhumabaev" data-ru="Алтынбек Жумабаев">Altynbek Zhumabaev</h5>
+                        <p class="card-text" data-en="BD-2305" data-ru="BD-2305">BD-2305</p>
+                        <div class="card-buttons"> <!-- Новый контейнер для кнопок -->
+                            <a href="#" class="btn event-button interested" data-id="1" data-en="Interested" data-ru="Интересует">Interested</a>
+                            <a href="#" class="btn event-button not-interested" data-id="1" data-en="Delete" data-ru="Удалить">Delete</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 me-3" style="width: 15rem;">
+                    <img class="card-img-top" src="img/student6.jpg" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Amina Rakhimova" data-ru="Амина Рахимова">Amina Rakhimova</h5>
+                        <p class="card-text" data-en="CS-2302" data-ru="CS-2302">CS-2302</p>
+                        <div class="card-buttons"> <!-- Новый контейнер для кнопок -->
+                            <a href="#" class="btn event-button interested" data-id="1" data-en="Interested" data-ru="Интересует">Interested</a>
+                            <a href="#" class="btn event-button not-interested" data-id="1" data-en="Delete" data-ru="Удалить">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                
+            
+            </div>
         </section>
     </main>
-    
+
     <script src="keydown.js"></script>
     <script src="changeuser.js"></script>
     <script src="checkbox.js"></script>
     <script src="language.js"></script> 
     <script src="sidebar.js"></script>
+    <script src="saves.js"></script>
 </body>    
 </html>

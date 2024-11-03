@@ -1,73 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
-    init();
+    loadPickedButtons();
+    initButtons();
 });
 
-function init() {
-    const cards = document.querySelectorAll('.card');
+function loadPickedButtons() {
+    // Получаем сохраненные кнопки из localStorage, если их нет - возвращаем пустой массив
+    const storedPickedButtons = JSON.parse(localStorage.getItem('pickedButtons') || '[]');
 
-    // Загружаем состояние из localStorage
-    const savedState = JSON.parse(localStorage.getItem('pickedButtons')) || {};
-    console.log("Загруженное состояние из localStorage:", savedState);
+    // Проверяем, является ли storedPickedButtons массивом
+    if (!Array.isArray(storedPickedButtons)) {
+        console.error('storedPickedButtons is not an array:', storedPickedButtons);
+        return;
+    }
 
-    cards.forEach(card => {
-        const interestedButton = card.querySelector('.interested');
-        const notInterestedButton = card.querySelector('.not-interested');
-
-        if (!interestedButton || !notInterestedButton) {
-            console.warn("Кнопки не найдены для карточки", card);
-            return;
+    // Проходим по всем кнопкам "Interested" и устанавливаем их состояние
+    document.querySelectorAll('.interested').forEach(button => {
+        const buttonId = button.getAttribute('data-id');
+        if (storedPickedButtons.includes(buttonId)) {
+            button.classList.add('picked');
+            button.textContent = 'Picked';
+        } else {
+            button.classList.remove('picked');
+            button.textContent = 'Interested';
         }
+    });
+}
 
-        const cardId = interestedButton.getAttribute('data-id');
+function savePickedButtons() {
+    // Сохраняем ID кнопок, которые имеют класс "picked"
+    const pickedButtons = Array.from(document.querySelectorAll('.interested'))
+        .filter(button => button.classList.contains('picked'))
+        .map(button => button.getAttribute('data-id'));
 
-        // Устанавливаем состояние кнопок на основе localStorage
-        if (savedState[cardId] && savedState[cardId].interested) {
-            setPickedState(card, interestedButton, notInterestedButton);
-        }
+    // Сохраняем массив ID в localStorage
+    localStorage.setItem('pickedButtons', JSON.stringify(pickedButtons));
+}
 
-        // Обработчики для кнопок
-        interestedButton.addEventListener('click', (e) => {
+function initButtons() {
+    // Добавляем обработчик событий на каждую кнопку "Interested"
+    document.querySelectorAll('.interested').forEach(button => {
+        button.addEventListener('click', (e) => {
             e.preventDefault();
-            setPickedState(card, interestedButton, notInterestedButton);
-            saveState();
+            
+            // Переключаем класс "picked" и изменяем текст кнопки
+            const isPicked = button.classList.toggle('picked');
+            button.textContent = isPicked ? 'Picked' : 'Interested';
+
+            // Сохраняем текущее состояние кнопок
+            savePickedButtons();
         });
-
-        notInterestedButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            card.remove();
-            saveState();
-        });
     });
 }
 
-function setPickedState(card, interestedButton, notInterestedButton) {
-    interestedButton.classList.add('picked');
-    interestedButton.textContent = 'Picked';
-    notInterestedButton.style.display = 'none';
-
-    const cancelButton = document.createElement('button');
-    cancelButton.classList.add('event-button', 'cancel');
-    cancelButton.textContent = 'Cancel';
-    card.querySelector('.event-buttons').appendChild(cancelButton);
-
-    cancelButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        interestedButton.classList.remove('picked');
-        interestedButton.textContent = 'Interested';
-        notInterestedButton.style.display = 'inline-block';
-        cancelButton.remove();
-        saveState();
-    });
-}
-
-function saveState() {
-    const state = {};
-    document.querySelectorAll('.card').forEach(card => {
-        const interestedButton = card.querySelector('.interested');
-        const cardId = interestedButton.getAttribute('data-id');
-        state[cardId] = { interested: interestedButton.classList.contains('picked') };
-    });
-
-    localStorage.setItem('pickedButtons', JSON.stringify(state));
-    console.log("Состояние сохранено в localStorage:", state);
-}

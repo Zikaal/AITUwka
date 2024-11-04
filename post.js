@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>${post.content}</p>
                     <hr>
                     <div class="post-actions mt-2">
-                        <button class="action-btn btn-primary btn-sm">Like</button>
                         <button class="action-btn btn-primary btn-sm" onclick="toggleCommentSection(${post.id})">Comment</button>
                     </div>
                     <div class="comment-section" id="comments-${post.id}" style="display: none;">

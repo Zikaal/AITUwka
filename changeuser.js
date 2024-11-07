@@ -1,21 +1,17 @@
 // Функция для загрузки данных из localStorage
 function loadUserData() {
     // Загружаем данные из 'userdata', если они существуют
+    const savedData = JSON.parse(localStorage.getItem('userProfileData'));
     const userData = JSON.parse(localStorage.getItem('userdata'));
+    
 
-    if (userData) {
-        const { firstname, lastname, dob } = userData;
+    if (savedData && savedData.firstname && savedData.lastname) {
+        if (savedData && savedData.firstname && savedData.lastname) {
+        document.getElementById('user-name').textContent = `${savedData.firstname} ${savedData.lastname}`;
 
-        if (firstname && lastname) {
-            document.getElementById('user-name').textContent = `${firstname} ${lastname}`;
-            localStorage.setItem('fname', firstname); // Сохраняем в localStorage для fname и lname
-            localStorage.setItem('lname', lastname);
-        }
-        if (dob) {
-            document.getElementById('user-dob').textContent = `Date of Birth: ${dob}`;
-            localStorage.setItem('dob', dob); // Сохраняем в localStorage для dob
-        }
-    } else {
+    }
+    } 
+    else if(userData) {
         // Если userdata отсутствует, берем значения из отдельных ключей localStorage
         const fname = localStorage.getItem('fname');
         const lname = localStorage.getItem('lname');
